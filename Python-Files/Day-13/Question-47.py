@@ -13,7 +13,7 @@ class Circle():
         self.radius = init_r
 
 
-    def __area__(self):
+    def area(self):
         return 3.1416 * (self.radius ** 2)
 
 
