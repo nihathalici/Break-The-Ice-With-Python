@@ -1,0 +1,55 @@
+"""
+Question 11
+Question
+Write a program which accepts a sequence of comma separated 4 digit binary numbers
+as its input and then check whether they are divisible by 5 or not.
+The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+
+Example:
+
+0100,0011,1010,1001
+
+Then the output should be:
+
+1010
+
+Notes: Assume the data is input by console.
+
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input.
+"""
+
+# converts binary to integer & returns zero if divisible by 5
+def check(x):
+    total, pw = 0, 1
+    reversed(x)
+
+    # ord() function returns ASCII value
+    for i in x:
+        total += pw * (ord(i) - 48)
+        pw *= 2
+    return total % 5
+
+# inputs taken here and splitted in ',' position
+data = input().split(",")
+lst = []
+
+# if zero found it means divisible by zero and added to the list
+for i in data:
+    if check(i) == 0:
+        lst.append(i)
+
+print(",".join(lst))
+
+
+
+
+
+
+
+
+
+
+
+
+
