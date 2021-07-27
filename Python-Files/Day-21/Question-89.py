@@ -17,7 +17,7 @@ class Male(Person):
     def getGender(self):
         return "Male"
 
-class Female():
+class Female(Person):
     def getGender(self):
         return "Female"
 
