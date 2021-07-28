@@ -1,0 +1,38 @@
+"""
+Question 49
+Question
+Define a class named Shape and its subclass Square. The Square class has an init function
+which takes a length as argument. Both classes have a area function which can print the area
+of the shape where Shape's area is 0 by default.
+
+Hints
+To override a method in super class, we can define a method with the same name in the super class.
+"""
+
+class Shape():
+    def __init__(self):
+        pass
+
+    def area(self):
+        pass
+
+class Square(Shape):
+    def __init__(self, init_length = 0):
+        Shape.__init__(self)
+        self.length = init_length
+
+    def area(self):
+        return self.length * self.length
+
+Mysqr = Square(5)
+
+# prints 25 as given argument
+print(Mysqr.area())
+
+# prints zero as default area
+print(Square().area())
+
+    
+
+
+
